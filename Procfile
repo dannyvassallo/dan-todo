@@ -1,2 +1,2 @@
-rails: bin/rails server
+rails: rails server
 ember: cd client && ember build --watch && cd ..

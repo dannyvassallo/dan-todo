@@ -36,6 +36,7 @@ gem "font-awesome-rails"
 gem 'whenever', :require => false
 gem 'active_model_serializers'
 gem 'restclient'
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
 
 gem 'figaro', '1.0'
