@@ -20,3 +20,7 @@
 
 # Ignore phonegap zips
 /client/wrap/*.zip
+
+# Ignore Node Modules and Bower Components
+/client/node_modules
+/client/bower_compon
