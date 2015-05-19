@@ -1,4 +1,4 @@
-rails: rails server
-ember: cd client && ember build --watch && cd ..
-phonegap: bin/phonegap serve
+rails: bin/rails server --port 3000
+ember: ember: bin/ember build --watch
+phonegap: bin/phonegap serve --port 4000
 
