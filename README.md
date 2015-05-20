@@ -19,3 +19,7 @@ To delete one:
 ```
 curl -H "X-Api-Key: TCwrsTTMp8C2H1vIHPNX4wtt" -X DELETE http://localhost:3000/api/v1/lists/[:id]
 ```
+To Start the Servers:
+```
+bin/serve
+```
