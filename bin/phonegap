@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+
+# Thin wrapper script to execute phonegap commands in the correct working directory.
+# All phonegap commands need to be run inside the client/wrap dir. To save remembering
+# to change directories, just run `bin/phonegap ...` from the project root. All
+# phonegap commands will work. For usage enter `bin/phonegap --help`
+
+# phonegap command working directory must be client/wrap:
+cd client/wrap
+
+# Ensure path symlinked to from www exists to make phonegap serve happy:
+symlink_target_path=$(readlink www)
+mkdir -p $symlink_target_path
+
+# Forward args to bin/phonegap to npm-installed phonegap command:
+phonegap "$@"
+
+# Return to project root:
+cd ../..

@@ -23,4 +23,7 @@
 
 # Ignore Node Modules and Bower Components
 /client/node_modules
-/client/bower_compon
+/client/bower_components
+/node_modules
+bower_components
+

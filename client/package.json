@@ -8,10 +8,14 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "ember server",
-    "build": "ember build",
-    "test": "ember test"
+    "build": "bin/ember build",
+    "test": "bin/ember test",
+    "postinstall": "bower install && bin/ember build --environment ${DEPLOY:-development}"
   },
+  "cacheDirectories": [
+    "node_modules",
+    "bower_components"
+  ],
   "repository": "",
   "engines": {
     "node": ">= 0.10.0"
