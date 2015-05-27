@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'dan-todo',
+    podModulePrefix: 'dan-todo/pods',
     environment: environment,
     baseURL: '/',
     locationType: 'hash',
