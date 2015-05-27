@@ -23,3 +23,7 @@ To Start the Servers:
 ```
 bin/serve
 ```
+Start foreman
+```
+foreman start -f Procfile.development "$@"
+```
