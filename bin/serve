@@ -1,1 +1,12 @@
-foreman start -f Procfile.development
+#!/usr/bin/env sh
+
+echo "Usage"
+echo "-----"
+echo "Run all: bin/serve"
+echo "Without phonegap: bin/serve all=1,phonegap=0 or bin/serve rails=1,ember=1"
+echo "Without rails: bin/serve all=1,rails=0"
+echo "Ember only: bin/serve ember"
+echo ""
+
+# Forward args to foreman command with "$@"
+foreman start -f Procfile.development "$@"

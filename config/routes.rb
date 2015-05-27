@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, only: [:sessions, :passwords, :confirmations]
   resources :users, only: [:show]
 
   resources :lists do

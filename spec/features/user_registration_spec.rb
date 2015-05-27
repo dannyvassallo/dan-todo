@@ -1,0 +1,27 @@
+require 'rails_helper'
+
+feature "User registration", type: :feature, js: true do
+
+  scenario "successful with valid details" do
+    visit root_path
+
+    click_link "Register"
+
+    expect(page).to have_title("Please register")
+
+    fill_in "Email", with: "clark@dailyplanet.metropolis"
+    fill_in "Password", with: "im superman"
+    fill_in "Confirm password", with: "im superman"
+    click_button "Register"
+
+    expect(page).to have_title("Please confirm")
+    expect(page).to have_text("Please check your inbox and click the link to confirm your account.")
+
+    open_email "clark@dailyplanet.metropolis", subject: "Confirm your account"
+    click_first_link_in_email
+
+    expect(page).to have_title("Confirmation successful")
+    expect(page).to have_text("Your account has been confirmed, thank you!")
+  end
+
+end
