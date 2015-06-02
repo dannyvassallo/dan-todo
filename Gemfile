@@ -19,6 +19,7 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'timecop'
+  gem 'email_spec'
 end
 
 gem 'rails', '4.2.0'
