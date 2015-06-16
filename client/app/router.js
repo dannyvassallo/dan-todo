@@ -8,4 +8,8 @@ var Router = Ember.Router.extend({
 export default Router.map(function() {
   // Configure 'user.new' route to serve it at URL path ending '/register':
   this.route('user.new', { path: '/register' });
+
+  this.route('confirmation', function() {
+    this.route('pending');
+  });
 });
