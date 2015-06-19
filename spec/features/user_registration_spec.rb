@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature "User registration", type: :feature, js: true do
-  
+
   scenario "successful with valid details" do
     visit root_path
 
@@ -16,11 +16,11 @@ feature "User registration", type: :feature, js: true do
     click_button "Create your account"
 
     expect(page).to have_title("Please confirm")
-    expect(page).to have_text("Please check your inbox and click the link to confirm your account.")
-    
+    expect(page).to have_text("Please check your inbox")
+
     open_email "clark@dailyplanet.metropolis", subject: "Confirm your account"
     click_first_link_in_email
-    
+
     expect(page).to have_title("Confirmation successful")
     expect(page).to have_text("Your account has been confirmed, thank you!")
   end
