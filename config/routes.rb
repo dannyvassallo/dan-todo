@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  devise_for :users, only: [:sessions, :passwords, :confirmations]
+  devise_for :users,
+    only: [:passwords, :confirmations], # removed: :registrations, :sessions
+    controllers: { confirmations: :confirmations }
   resources :users, only: [:show]
 
   resources :lists do
@@ -17,4 +19,5 @@ Rails.application.routes.draw do
   end
 
   root to: 'welcome#index'
+  get '/' => 'welcome#index', as: :login, defaults: { anchor: "/login" }
 end
