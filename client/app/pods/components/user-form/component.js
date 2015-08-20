@@ -19,7 +19,7 @@ export default Ember.Component.extend({
       // Use ES6 arrow function => syntax to avoid having to call .bind(this)
       // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
       var transitionToConfirmationPending = () => {
-        this.get('router').transitionTo('confirmation.pending');
+        this.get('router').transitionTo('confirmation-pending');
       };
 
       // Register/save the user via an AJAX request to the server API:
